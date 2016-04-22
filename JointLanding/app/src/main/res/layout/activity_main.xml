@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.project.tiang.jointlanding.MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/account_btn_margin_left"
+        android:layout_marginRight="@dimen/account_btn_margin_right"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/list_divider_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/account_text_margin_left"
+            android:layout_marginRight="@dimen/account_text_margin_right"
+            android:gravity="center_horizontal"
+            android:singleLine="false"
+            android:text="@string/account_other_account_prompt"
+            android:textSize="@dimen/text_default_size"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/list_divider_line" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/account_btn_margin_left"
+        android:layout_marginRight="@dimen/account_btn_margin_right"
+        android:layout_marginTop="@dimen/account_btn_margin_top">
+
+        <Button
+            android:id="@+id/btnWeiXin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_weixin_selector" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnQQ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_qq_selector" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnWeiBo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_weibo_selector" />
+    </LinearLayout>
+</LinearLayout>

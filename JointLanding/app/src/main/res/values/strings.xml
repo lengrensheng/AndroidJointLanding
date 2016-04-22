@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JointLanding</string>
+    <string name="account_other_account_prompt">其他账号快速登录</string>
+    <string name="text_account_loadding">正在处理...</string>
+</resources>
