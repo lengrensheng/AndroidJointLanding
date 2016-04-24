@@ -1,5 +1,6 @@
 package com.project.tiang.jointlanding;
 
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ import com.tencent.tauth.UiError;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 
 public class MainActivity extends AppCompatActivity implements IUiListener {
 
@@ -96,12 +98,12 @@ public class MainActivity extends AppCompatActivity implements IUiListener {
     /**
      * 参考资料：http://wiki.open.qq.com/wiki/QQ%E7%99%BB%E5%BD%95%E5%92%8C%E6%B3%A8%E9%94%80#1._.E5.88.9B.E5.BB.BA.E5.B7.A5.E7.A8.8B.E5.B9.B6.E9.85.8D.E7.BD.AE.E5.B7.A5.E7.A8.8B
      */
-
     private void LoginByQQ() {
         mWaitDialog = DialogUtils.showWaitDialog(MainActivity.this, getString(R.string.text_account_loadding), false, false);
         mTencent = Tencent.createInstance(AccountConstants.QQ.CLIENT_ID, this.getApplicationContext());
         if (!mTencent.isSessionValid()) {
             mTencent.login(this, AccountConstants.QQ.SCOPE, this);
+
         } else {
             if (mWaitDialog != null && mWaitDialog.isShowing()) {
                 mWaitDialog.dismiss();
@@ -174,7 +176,6 @@ public class MainActivity extends AppCompatActivity implements IUiListener {
     }
 
     @Override
-
     protected void onStop() {
         super.onStop();
         hideDialog();

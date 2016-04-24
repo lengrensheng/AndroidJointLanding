@@ -11,6 +11,7 @@ public class AccountConstants {
 
     public interface QQ {
         String CLIENT_ID = "1032909358";//按需求更换
+
         String SCOPE = null;
     }
 
