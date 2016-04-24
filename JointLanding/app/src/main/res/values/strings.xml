@@ -3,4 +3,6 @@
     <string name="account_other_account_prompt">其他账号快速登录</string>
     <string name="text_account_loadding">正在处理...</string>
     <string name="account_not_install_wx">未安装微信，请先安装微信</string>
+    <string name="menu_share_picture">分享图片</string>
+    <string name="menu_share_text">分享文字</string>
 </resources>

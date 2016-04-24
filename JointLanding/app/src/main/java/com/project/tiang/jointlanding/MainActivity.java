@@ -1,11 +1,16 @@
 package com.project.tiang.jointlanding;
 
 
+import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -30,8 +35,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class MainActivity extends AppCompatActivity implements IUiListener {
+public class MainActivity extends AppCompatActivity implements IUiListener{
 
+    private static final String TAG = "MainActivity";
+    public static final int SHARE_TEXT = 100;
+    public static final int SHARE_PICTURE = 200;
     @Bind(R.id.btnWeiXin)
     Button btnWeiXin;
     @Bind(R.id.btnQQ)
@@ -52,6 +60,33 @@ public class MainActivity extends AppCompatActivity implements IUiListener {
             String accessToken = intent.getStringExtra(WXEntryActivity.WX_CODE);
             if (!TextUtils.isEmpty(accessToken)) {
                 Toast.makeText(getApplicationContext(), accessToken, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mInflater = getMenuInflater();
+        mInflater.inflate(R.menu.setting,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this,ShareActivity.class);
+        switch (item.getItemId()){
+            case R.id.menu_share_text:{
+                intent.setFlags(SHARE_TEXT);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.menu_share_picture:{
+                intent.setFlags(SHARE_PICTURE);
+                startActivity(intent);
+                return true;
+            }
+            default:{
+                return super.onOptionsItemSelected(item);
             }
         }
     }

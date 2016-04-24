@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_share_text"
+        android:icon="@mipmap/ic_launcher"
+        android:showAsAction="never|collapseActionView"
+        android:title="@string/menu_share_text"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/menu_share_picture"
+        android:icon="@mipmap/ic_launcher"
+        android:showAsAction="never|collapseActionView"
+        android:title="@string/menu_share_picture"
+        tools:ignore="AppCompatResource" />
+</menu>

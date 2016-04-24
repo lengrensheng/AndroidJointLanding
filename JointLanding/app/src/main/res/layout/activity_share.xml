@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+    <LinearLayout
+        android:id="@+id/ll_share_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="请输入需要分享的内容："/>
+        <EditText
+            android:id="@+id/edt_input_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:padding="4dp"
+            android:scrollbars="vertical"
+            android:gravity="top"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_share_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分享的图片："/>
+        <ImageView
+            android:id="@+id/img_share_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/account_btn_margin_left"
+        android:layout_marginRight="@dimen/account_btn_margin_right"
+        android:layout_marginTop="@dimen/account_btn_margin_top"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/account_btn_margin_top">
+
+        <Button
+            android:id="@+id/btnWeiXin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_weixin_selector" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnQQ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_qq_selector" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnWeiBo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_weibo_selector" />
+    </LinearLayout>
+</RelativeLayout>
