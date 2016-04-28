@@ -5,4 +5,5 @@
     <string name="account_not_install_wx">未安装微信，请先安装微信</string>
     <string name="menu_share_picture">分享图片</string>
     <string name="menu_share_text">分享文字</string>
+    <string name="text_account_sharing">分享中...</string>
 </resources>

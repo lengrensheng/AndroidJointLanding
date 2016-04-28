@@ -26,7 +26,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ShareActivity"
-            android:screenOrientation="portrait"/>
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+            <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+
+    </activity>
         //微博
         <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
             android:configChanges="keyboardHidden|orientation"
