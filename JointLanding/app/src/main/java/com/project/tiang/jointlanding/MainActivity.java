@@ -1,13 +1,10 @@
 package com.project.tiang.jointlanding;
 
-
-import android.app.ActionBar;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -123,6 +120,18 @@ public class MainActivity extends AppCompatActivity implements IUiListener{
             case R.id.btnWeiBo: {
                 LoginByWeibo();
                 break;
+            }
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = getIntent();
+        if (intent!=null){
+            String wx_code = intent.getStringExtra(WXEntryActivity.WX_CODE);
+            if(!TextUtils.isEmpty(wx_code)){
+
             }
         }
     }
